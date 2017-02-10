@@ -12,7 +12,7 @@
 }
 
 .circle-menu {
-  background: burlywood;
+  background: transparent;
   border-radius: 50%;
   position: relative;
   list-style: none;
@@ -36,7 +36,7 @@
   z-index: 0;
 }
 
-.icon-plus:before, .icon-minus:before {
+.icon-plus:before{
   color: #8cc;
   position: relative;
   top: @plus-pos-x+0px;
@@ -168,5 +168,113 @@
   &:hover {
     transform: scale(1);
     transform: rotate(0);
+  }
+}
+
+
+//======================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//======================================================================
+
+
+.round-tool-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  span{
+    position: relative;
+    margin: 0;
+    //-webkit-border-radius: 25px;
+    //-moz-border-radius: 25px;
+    //border-radius: 25px;
+    //background-color: #00a379;
+    .centerAction{
+      position: absolute;
+      color: darkred;
+      top: 0px;
+      left: 0px;
+    }
+    .leftAction{
+      position: absolute;
+      top: 0px;
+      left: -25px;
+      color: #0000c0
+    }
+    .bottomAction{
+      position: absolute;
+      top: 30px;
+      color: #0000c0
+    }
+    .rightAction{
+      position: absolute;
+      top: 0px;
+      left: 25px;
+      color: #0000c0
+    }
+    .bottomRightAction{
+      position: absolute;
+      top: 20px;
+      left : 20px;
+      color: red;
+    }
+    .bottomLeftAction{
+      position: absolute;
+      top: 20px;
+      left : -20px;
+      color: red;
+      /*background-color: #0ba3cf;*/
+    }
+    .topLeftAction{
+      position: absolute;
+      top: -25px;
+      left : -20px;
+      color: indianred;
+    }
+    .topRightAction{
+      position: absolute;
+      top: -25px;
+      left : 20px;
+      color: indianred;
+    }
+    .topAction{
+      position: absolute;
+      top: -25px;
+      left : 0px;
+      color: indianred;
+    }
+
+    .glyphicon {
+      transition: all 0.2s;
+      //background-color: #00a379;
+      //background-color: rgba(0, 255, 0, 1);
+      background-color:transparent;
+      padding: 4px;
+      cursor: pointer;
+      -webkit-border-radius: 14px;
+      -moz-border-radius: 14px;
+      border-radius: 14px;
+      &:hover{
+        //font-size: 150%;
+        //background-color: rgba(0, 0, 0, 0.08)
+        font-size: 150%;
+        background-color: rgba(100, 100, 100, 1);
+      }
+    }
   }
 }
