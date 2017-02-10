@@ -21,6 +21,9 @@ export class AppComponent {
 
   action(name: string) {
     console.log("execute", name);
+    if(name=="aa"){
+      alert(name);
+    }
   }
 
   click() {

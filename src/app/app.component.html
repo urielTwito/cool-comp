@@ -1,6 +1,20 @@
 <h1>
   {{title}}
 </h1>
-<cool-round-menu [actions]="actions" ></cool-round-menu>
+
+
+<div style="position:relative;background-color: darksalmon;border: 1px red solid;width: 300px;height: 200px">
+  <div class="circle-holder">
+    <cool-round-menu [actions]="actions"></cool-round-menu>
+  </div>
+  <div class="circle-holder1">
+    <cool-round-menu [actions]="actions"></cool-round-menu>
+  </div>
+  <div class="circle-holder2">
+    <cool-round-menu [actions]="actions"></cool-round-menu>
+  </div>
+
+</div>
+
 
 <button (click)="click()">jjj</button>
