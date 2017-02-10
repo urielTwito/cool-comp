@@ -7,7 +7,7 @@ import {Component, OnInit, Input, Renderer, ElementRef} from '@angular/core';
 })
 export class RoundMenuComponent {
 
-  MAX_ITEMS: number = 5;
+  MAX_ITEMS: number = 6;
   _actions: ApplicationAction<any>[];
   currentActionPos: number = 0;
 
