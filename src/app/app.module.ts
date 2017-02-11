@@ -9,6 +9,8 @@ import { RoundMenuDemoComponent } from './app/demo/round-menu-demo/round-menu-de
 import {RouterModule} from "@angular/router";
 import {APP_ROUTES} from "./app.routing";
 import {DescriptionComponent} from "./app/description.component";
+import { ToggleButtonComponent } from '../components/toggle-button/toggle-button.component';
+import { ToggleButtonDemoComponent } from './app/demo/toggle-button-demo/toggle-button-demo.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import {DescriptionComponent} from "./app/description.component";
     RoundMenuComponent,
     RoundMenuComponent,
     RoundMenuDemoComponent,
-    DescriptionComponent
+    DescriptionComponent,
+    ToggleButtonComponent,
+    ToggleButtonDemoComponent
   ],
   imports: [
     BrowserModule,

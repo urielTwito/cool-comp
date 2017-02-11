@@ -1,0 +1,76 @@
+@onColor:#0cb6e7;
+@offColor:red;
+@knobColor:#ddd;
+@knobRadius:20px;
+
+.Transition(@arg){
+  transition:@arg;
+}
+
+body{
+  box-sizing:border-box;
+}
+.container{
+  width:100px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.toggle-wrapper{
+
+  margin-bottom:15px;
+  box-sizing:border-box;
+  position:relative;
+  width:35px;
+  height:~"calc(@{knobRadius} - 5px)";
+  box-sizing:border-box;
+}
+
+input.toggle{
+  box-sizing:border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position:absolute;
+  top:0;
+  margin:0;
+  width:100%;
+  height:100%;
+  border-radius:500px;
+  border:1px solid #ddd;
+  background-color:#ddd;
+  box-shadow:1px 1px 4px darken(@knobColor,10%);
+  .Transition(all 0.1s linear);
+  &:focus{
+    outline:none;
+  }
+  //toggle button
+  &:before{
+    box-sizing:border-box;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left:0;
+    content:'';
+    display:block;
+    width:@knobRadius;
+    height:@knobRadius;
+    border-radius:50%;
+    border:1px solid #DDD;
+    background-color:@knobColor;
+    box-shadow:inherit;
+    cursor:pointer;
+    .Transition(all 0.1s linear);
+  }
+  &:checked{
+    box-sizing:border-box;
+    background:lighten(@onColor,15%);
+    border:1px solid lighten(@onColor,15%) ;
+    &:before{
+      left:~"calc(100% - @{knobRadius} + 1px)";
+      background:@onColor;
+      border:1px solid @onColor;
+      // box-shadow:-1px 1px 4px darken(@knobColor,10%);
+    }
+  }
+}
