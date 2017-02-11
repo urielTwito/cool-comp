@@ -1,7 +1,17 @@
 <p>
   toggle-button-demo works!
 </p>
+<div style="width: 50px" >
+  <cool-toggle-button [(isChecked)]="untouchedCheck"></cool-toggle-button>
+  {{untouchedCheck}}
+</div>
 
+<div class="first">
+  <cool-toggle-button [(isChecked)]="firstIsCheck"></cool-toggle-button>
+  {{firstIsCheck}}
+</div>
 
-<cool-toggle-button [(isChecked)]="firstIsCheck"></cool-toggle-button> {{firstIsCheck}}
-<cool-toggle-button [(isChecked)]="secondIsCheck"></cool-toggle-button>{{secondIsCheck}}
+<div style="width: 70px" class="second">
+  <cool-toggle-button [(isChecked)]="secondIsCheck"></cool-toggle-button>
+  {{secondIsCheck}}
+</div>

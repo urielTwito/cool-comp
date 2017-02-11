@@ -1,9 +1,10 @@
-import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
+import {Component, OnInit, Input, Output, EventEmitter, ViewEncapsulation} from '@angular/core';
 
 @Component({
   selector: 'cool-toggle-button',
   templateUrl: 'toggle-button.component.html',
-  styleUrls: ['toggle-button.component.css']
+  styleUrls: ['toggle-button.component.css'],
+  encapsulation:ViewEncapsulation.None
 })
 export class ToggleButtonComponent implements OnInit {
 
