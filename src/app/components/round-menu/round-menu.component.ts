@@ -11,6 +11,19 @@ export class RoundMenuComponent {
   _actions: ApplicationAction<any>[];
   currentActionPos: number = 0;
 
+  private _displayMod: DisplayMode = DisplayMode.Minimized;
+
+  private displayClass: string;
+
+  @Input()
+  set displayMod(mode: DisplayMode) {
+    this._displayMod = mode;
+    this.setDisplayClass(mode);
+  }
+
+  get displayMode(): DisplayMode {
+    return this._displayMod;
+  }
 
   @Input()
   set actions(actions: ApplicationAction<any>[]) {
@@ -19,9 +32,10 @@ export class RoundMenuComponent {
 
   constructor(private elementref: ElementRef, private renderer: Renderer) {
     this.currentActionPos = 0;
+    this.displayMod = DisplayMode.Minimized
   }
 
-  public nextItems() {
+  nextItems() {
     if (this.currentActionPos + this.MAX_ITEMS >= this.actions.length) {
       this.currentActionPos = 0;
     }
@@ -38,12 +52,31 @@ export class RoundMenuComponent {
     return this._actions;
   }
 
+  private setDisplayClass(mode: DisplayMode) {
+    const baseClass = "circle-holder";
+    let classMode = "normal";
+    switch (mode) {
+      case DisplayMode.Minimized:
+        classMode = "minimized";
+        break;
+      case DisplayMode.Normal:
+        classMode = "normal";
+        break;
+    }
+    this.displayClass = `${baseClass}-${classMode}`;
+    console.log(this.displayClass);
+  }
+
   private execute(action) {
     action.execute();
   }
 
 }
 
+export enum DisplayMode{
+  Minimized,
+  Normal,
+}
 
 export class ApplicationAction<T> {
   public subActions: Array<ApplicationAction<T>>;

@@ -1,5 +1,5 @@
-<div class="circle-holder">
-  <ul class="circle-menu" id="menu1">
+<div class="{{displayClass}}" >
+  <ul class="circle-menu" >
     <a class="menu-button icon-plus" (click)="nextItems()" title="Next Items"></a>
     <li class="menu-item {{action.icon}}" *ngFor="let action of partialActions;">
       <a class="menu-item-back" (click)="execute(action)" title="{{action.tooltip}}"></a></li>
