@@ -64,7 +64,6 @@ export class RoundMenuComponent {
         break;
     }
     this.displayClass = `${baseClass}-${classMode}`;
-    console.log(this.displayClass);
   }
 
   private execute(action) {

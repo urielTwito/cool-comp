@@ -4,8 +4,14 @@
 
 
 <div style="display: flex;justify-content:space-around;">
-  <div style="border:1px solid red;">Menu  </div>
-  <div style="border:1px solid red;"> <app-round-menu-demo></app-round-menu-demo>
+  <div style="border:1px solid red;">
+  <ul>
+   <li><a routerLink="" >Home</a></li>
+   <li><a routerLink="/round-menu" routerLinkActive="active">Round Menu</a></li>
+  </ul>
   </div>
-  <div style="border:1px solid red;"></div>
+  <div style="border:1px solid red;">
+    <router-outlet></router-outlet>
+  </div>
+  <div ></div>
 </div>
