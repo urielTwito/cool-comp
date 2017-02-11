@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {ApplicationAction} from "./components/round-menu/round-menu.component";
+import {ApplicationAction} from "../components/round-menu/round-menu.component";
 
 @Component({
   selector: 'app-root',
