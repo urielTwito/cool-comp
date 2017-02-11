@@ -5,12 +5,14 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { RoundMenuComponent } from '../components/round-menu/round-menu.component';
+import { RoundMenuDemoComponent } from './app/demo/round-menu-demo/round-menu-demo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RoundMenuComponent,
-    RoundMenuComponent
+    RoundMenuComponent,
+    RoundMenuDemoComponent
   ],
   imports: [
     BrowserModule,

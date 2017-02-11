@@ -2,40 +2,10 @@
   {{title}}
 </h1>
 
-<div style="position:relative;background-color: #88e991;border: 1px #2651e7 solid;width: 300px;height: 100px">
-  <cool-round-menu [displayMod]="1" [actions]="actions"></cool-round-menu>
+
+<div style="display: flex;justify-content:space-around;">
+  <div style="border:1px solid red;">Menu  </div>
+  <div style="border:1px solid red;"> <app-round-menu-demo></app-round-menu-demo>
+  </div>
+  <div style="border:1px solid red;"></div>
 </div>
-
-<div style="position:relative;background-color: #3ee9c7;border: 1px red solid;width: 300px;height: 200px">
-  <div class="circle-holder">
-    <cool-round-menu [actions]="actions"></cool-round-menu>
-  </div>
-  <div class="circle-holder1">
-    <cool-round-menu [actions]="actions"></cool-round-menu>
-  </div>
-  <div class="circle-holder2">
-    <cool-round-menu [actions]="actions"></cool-round-menu>
-  </div>
-
-</div>
-
-
-
-<div style="overflow: hidden;background-color: #f6ff43;border: 1px #2651e7 solid;width: 300px;height: 100px">
-  <cool-round-menu [displayMod]="1" [actions]="actions"></cool-round-menu>
-</div>
-
-<div style="position:relative;background-color: darksalmon;border: 1px red solid;width: 300px;height: 200px">
-  <div class="circle-holder">
-    <cool-round-menu [actions]="actions"></cool-round-menu>
-  </div>
-  <div class="circle-holder1">
-    <cool-round-menu [actions]="actions"></cool-round-menu>
-  </div>
-  <div class="circle-holder2">
-    <cool-round-menu [actions]="actions"></cool-round-menu>
-  </div>
-
-</div>
-
-<button (click)="click()">jjj</button>
