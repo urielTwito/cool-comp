@@ -12,6 +12,8 @@ import {DescriptionComponent} from "./app/description.component";
 import { ToggleButtonComponent } from '../components/toggle-button/toggle-button.component';
 import { ToggleButtonDemoComponent } from './app/demo/toggle-button-demo/toggle-button-demo.component';
 import { AccordionComponent } from '../components/accordion/accordion.component';
+import { AccordionDemoComponent } from './app/demo/accoridion-demo/accordion-demo.component';
+import {AccordionChildComponent} from "../components/accordion/accordion-child.component";
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { AccordionComponent } from '../components/accordion/accordion.component'
     DescriptionComponent,
     ToggleButtonComponent,
     ToggleButtonDemoComponent,
-    AccordionComponent
+    AccordionComponent,
+    AccordionDemoComponent,
+    AccordionChildComponent
   ],
   imports: [
     BrowserModule,
