@@ -11,6 +11,7 @@ import {APP_ROUTES} from "./app.routing";
 import {DescriptionComponent} from "./app/description.component";
 import { ToggleButtonComponent } from '../components/toggle-button/toggle-button.component';
 import { ToggleButtonDemoComponent } from './app/demo/toggle-button-demo/toggle-button-demo.component';
+import { AccordionComponent } from '../components/accordion/accordion.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ToggleButtonDemoComponent } from './app/demo/toggle-button-demo/toggle-
     RoundMenuDemoComponent,
     DescriptionComponent,
     ToggleButtonComponent,
-    ToggleButtonDemoComponent
+    ToggleButtonDemoComponent,
+    AccordionComponent
   ],
   imports: [
     BrowserModule,
