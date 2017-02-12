@@ -1,11 +1,20 @@
+    <!--<div class="toggle-wrapper">-->
+      <!--<input type="checkbox" class="toggle toggle-custom"    [checked]="isChecked"-->
+             <!--(change)="onChange($event.target)"-->
+              <!--#check/>-->
+
+    <!--</div>-->
+
+
 <!--<div class="container">-->
-  <!--<div>-->
-    <div class="toggle-wrapper">
-      <input type="checkbox" class="toggle toggle-custom"    [checked]="isChecked"
+  <!--<div style="width:50px">-->
+    <label class="switch">
+      <input type="checkbox"
+             checked
+             #check
              (change)="onChange($event.target)"
-              #check/>
-
-    </div>
+             [checked]="isChecked">
+      <div class="slider round"></div>
+    </label>
   <!--</div>-->
-
 <!--</div>-->

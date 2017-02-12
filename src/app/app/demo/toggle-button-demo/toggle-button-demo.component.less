@@ -1,26 +1,29 @@
 
 .first {
+  .slider{
+    background-color: #a52a60;
+  }
   cool-toggle-button {
-    input.toggle {
-      background-color: #a52a60;
-      &:checked {
+    input {
+      &:checked + .slider {
         background: lighten(#a52a60, 15%);
         &:before {
-          background-color: blanchedalmond;
+          background-color: #a52a60;
         }
       }
     }
   }
 }
-
 .second {
+  .slider{
+    background-color: black;//#2ea564;
+  }
   cool-toggle-button {
-    input.toggle {
-      background-color: #2ea564;
-      &:checked {
+    input{
+      &:checked + .slider {
         background: lighten(#2ea564, 15%);
         &:before {
-          background-color: blanchedalmond;
+          background-color: #2ea564;
         }
       }
     }
