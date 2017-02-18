@@ -13,7 +13,7 @@ import { ToggleButtonComponent } from '../components/toggle-button/toggle-button
 import { ToggleButtonDemoComponent } from './app/demo/toggle-button-demo/toggle-button-demo.component';
 import { AccordionComponent } from '../components/accordion/accordion.component';
 import { AccordionDemoComponent } from './app/demo/accoridion-demo/accordion-demo.component';
-import {AccordionChildComponent} from "../components/accordion/accordion-child.component";
+import {AccordionItemComponent} from "../components/accordion/accordion-item.component";
 
 @NgModule({
   declarations: [
@@ -26,7 +26,7 @@ import {AccordionChildComponent} from "../components/accordion/accordion-child.c
     ToggleButtonDemoComponent,
     AccordionComponent,
     AccordionDemoComponent,
-    AccordionChildComponent
+    AccordionItemComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,48 @@
+@active-first-color: #86fffc;
+@active-second-color: #a6c1ea;
+
+.accordion {
+  margin-bottom: 20px;
+}
+
+.item-main {
+  border: 1px solid gray;
+  margin-bottom: 0;
+  border-radius: 3px;
+  .item-title {
+    font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;
+    padding: 5px 20px;
+    position: relative;
+    z-index: 20;
+    display: block;
+    height: 30px;
+    cursor: pointer;
+    color: #777;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.8);
+    line-height: 33px;
+    font-size: 19px;
+    .gradient-color(#ffffff, #eaeaea);
+    box-shadow: 0 0 0 1px rgba(155, 155, 155, 0.3),
+    1px 0 0 0 rgba(255, 255, 255, 0.9) inset,
+    0 2px 2px rgba(0, 0, 0, 0.1);
+    &.active {
+      .gradient-color(@active-first-color, @active-second-color);
+    }
+    &:hover {
+      .gradient-color(#f2fffa, #1e5aff);
+    }
+  }
+}
+
+
+.gradient-color(@first,@second) {
+  background: @first;
+  background: -moz-linear-gradient(top, @first 1%, @second 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(1%, @first), color-stop(100%, @second));
+  background: -webkit-linear-gradient(top, @first 1%, @second 100%);
+  background: -o-linear-gradient(top, @first 1%, @second 100%);
+  background: -ms-linear-gradient(top, @first 1%, @second 100%);
+  background: linear-gradient(top, @first 1%, @second 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@first', endColorstr='@second', GradientType=0);
+}
+

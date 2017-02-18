@@ -1,25 +1,30 @@
-import {Component, QueryList, ContentChildren, AfterContentInit} from '@angular/core';
-import {AccordionChildComponent} from "./accordion-child.component";
+import {Component} from "@angular/core";
+import {AccordionItemComponent} from "./accordion-item.component";
 
 @Component({
   selector: 'cool-accordion',
   templateUrl: 'accordion.component.html',
   styleUrls: ['accordion.component.css']
 })
-export class AccordionComponent implements AfterContentInit {
+export class AccordionComponent {
+  items: Array<AccordionItemComponent> = [];
 
-  @ContentChildren(AccordionChildComponent)
-  childComponents: QueryList<AccordionChildComponent>;
-
-  ngAfterContentInit() {
-    let activeChildComponent = this.childComponents.filter((child) => child.active);
-    if (activeChildComponent.length === 0) {
-      this.selectTab(this.childComponents.first);
-    }
+  addItem(item: AccordionItemComponent): void {
+    this.items.push(item);
   }
 
-  selectTab(childComponent: AccordionChildComponent) {
-    this.childComponents.toArray().forEach(child => child.active = false);
-    childComponent.active = true;
+  closeOthers(openItem: AccordionItemComponent): void {
+    this.items.forEach((item: AccordionItemComponent) => {
+      if (item !== openItem) {
+        item.isOpen = false;
+      }
+    });
+  }
+
+  removeIem(item: AccordionItemComponent): void {
+    const index = this.items.indexOf(item);
+    if (index !== -1) {
+      this.items.splice(index, 1);
+    }
   }
 }
