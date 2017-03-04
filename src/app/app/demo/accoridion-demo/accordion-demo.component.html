@@ -5,18 +5,20 @@
   </cool-accordion-item>
   <cool-accordion-item [title]="'Child  2'">
     <h1> this is another accordion</h1>
-    <cool-accordion style="position: relative;left: 25px;">
-      <cool-accordion-item [title]="'sub menu 1'"> this is ok</cool-accordion-item>
-      <cool-accordion-item [title]="'sub menu 2'"> jdhf jhdsl lds lksjd lkjds ljdsl fjsld jlds jlds jf
-      </cool-accordion-item>
-      <cool-accordion-item [title]="'sub menu 3'">
-        <div style="width: 70px" class="second">
-          <span>is it Ok</span>
-          <span>
-          <cool-toggle-button [(isChecked)]="secondIsCheck" ></cool-toggle-button>
+    <div style="padding-left: 20px;">
+      <cool-accordion>
+        <cool-accordion-item [title]="'sub menu 1'"> this is ok</cool-accordion-item>
+        <cool-accordion-item [title]="'sub menu 2'"> jdhf jhdsl lds lksjd lkjds ljdsl fjsld jlds jlds jf
+        </cool-accordion-item>
+        <cool-accordion-item [title]="'sub menu 3'">
+          <div style="width: 70px">
+            <span>is it Ok</span>
+            <span>
+          <cool-toggle-button [(isChecked)]="secondIsCheck"></cool-toggle-button>
         </span>
-        </div>
-      </cool-accordion-item>
-    </cool-accordion>
+          </div>
+        </cool-accordion-item>
+      </cool-accordion>
+    </div>
   </cool-accordion-item>
 </cool-accordion>

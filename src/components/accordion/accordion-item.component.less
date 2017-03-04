@@ -28,8 +28,10 @@
     &.active {
       .gradient-color(@active-first-color, @active-second-color);
     }
+    transition: all 500ms;
     &:hover {
       .gradient-color(#f2fffa, #1e5aff);
+      .gradient-color(@active-second-color, @active-first-color);
     }
   }
 }
@@ -46,3 +48,13 @@
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@first', endColorstr='@second', GradientType=0);
 }
 
+.panel-collapse{
+  transition: all 0.5s;
+  overflow: hidden;
+}
+.closed{
+  height: 0;
+}
+.open{
+  height: 200px;
+}

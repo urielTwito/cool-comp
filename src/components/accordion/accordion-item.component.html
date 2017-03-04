@@ -1,7 +1,8 @@
 <div class="item-main" [ngClass]="{'panel-open': isOpen}">
       <div (click)="toggleOpen($event)" class="item-title" [ngClass]="{'active' : isOpen}">{{title}}</div>
   <!--<div class="panel-collapse" [hidden]="!isOpen">-->
-    <div class="panel-collapse" *ngIf="isOpen" >
+  <div class="panel-collapse {{isOpen?'open':'closed'}}" >
+    <!--<div class="panel-collapse" *ngIf="isOpen" >-->
     <div class="panel-body">
       <ng-content></ng-content>
     </div>
