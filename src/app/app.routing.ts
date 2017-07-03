@@ -4,6 +4,7 @@ import {DescriptionComponent} from "./app/description.component";
 import {ToggleButtonDemoComponent} from "./app/demo/toggle-button-demo/toggle-button-demo.component";
 import {AccordionDemoComponent} from "./app/demo/accoridion-demo/accordion-demo.component";
 import {ItemListComponent} from "./app/firebase/item-list.component";
+import {TemplateComponent} from "./app/templaes/template.component";
 export const APP_ROUTES: Routes = [
   {
     path: '', component: DescriptionComponent,
@@ -11,5 +12,6 @@ export const APP_ROUTES: Routes = [
   {path: "round-menu", component: RoundMenuDemoComponent},
   {path: "toggle-button", component: ToggleButtonDemoComponent},
   {path: "accordion", component: AccordionDemoComponent},
-  {path: "firebaseItemList", component: ItemListComponent}
+  {path: "firebaseItemList", component: ItemListComponent},
+  {path: "templates", component: TemplateComponent},
 ];

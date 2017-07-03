@@ -17,6 +17,7 @@ import {AccordionItemComponent} from "../components/accordion/accordion-item.com
 
 import {AngularFireModule, FIREBASE_PROVIDERS} from 'angularfire2';
 import {ItemListComponent} from "./app/firebase/item-list.component";
+import {TemplateComponent, TemplateChildComponent} from "./app/templaes/template.component";
 
 export const firebaseConfig = {
   apiKey: "AIzaSyCmMeJz0YIwTPbadsiGie1oc-H_iX8XJKY",
@@ -38,7 +39,9 @@ export const firebaseConfig = {
     AccordionComponent,
     AccordionDemoComponent,
     AccordionItemComponent,
-    ItemListComponent
+    ItemListComponent,
+    TemplateComponent,
+    TemplateChildComponent
   ],
   imports: [
     BrowserModule,
